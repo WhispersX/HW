@@ -98,8 +98,8 @@ menu = {
     114 : reset,     # r
     108 : load,      # l
     115 : save,      # s
-    98 : bwconvert,  # b
-    112 : lighten,   # p
+    103 : bwconvert,  # g
+    98  : lighten,   # b
     100 : darken     #d
     }
 
