@@ -84,7 +84,28 @@ def bw(image_surf):
             pixels3d[x,y] = grayPixel(pixels3d[x,y])
 
 def light(pixel):
-    return (pixel[0]+10, pixel[1]+10, pixel[2]+10)
+    if(pixel[0]+10>255):
+        pixel[0]=255
+    elif(pixel[0]+10<0):
+        pixel[0]=0
+    else:
+        pixel[0]=pixel[0]+10
+    
+    if(pixel[1]+10>255):
+        pixel[1]=255
+    elif(pixel[1]+10<0):
+        pixel[1]=0
+    else:
+        pixel[1]=pixel[1]+10
+
+    if(pixel[2]+10>255):
+        pixel[2]=255
+    elif(pixel[2]+10<0):
+        pixel[2]=0
+    else:
+        pixel[2]=pixel[2]+10
+    return (pixel[0],pixel[1], pixel[2])
+    ##return (pixel[0]+10, pixel[1]+10, pixel[2]+10)
 
 def lighten(image_surf):
 
@@ -102,7 +123,27 @@ def lighten(image_surf):
 
 
 def dark(pixel):
-    return (pixel[0]-10, pixel[1]-10, pixel[2]-10)
+    if(pixel[0]-10>255):
+        pixel[0]=255
+    elif(pixel[0]-10<0):
+        pixel[0]=0
+    else:
+        pixel[0]=pixel[0]-10
+    
+    if(pixel[1]-10>255):
+        pixel[1]=255
+    elif(pixel[1]-10<0):
+        pixel[1]=0
+    else:
+        pixel[1]=pixel[1]-10
+
+    if(pixel[2]-10>255):
+        pixel[2]=255
+    elif(pixel[2]-10<0):
+        pixel[2]=0
+    else:
+        pixel[2]=pixel[2]-10
+    return (pixel[0],pixel[1], pixel[2])
 
 def darken(image_surf):
 
